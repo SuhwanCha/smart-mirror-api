@@ -11,13 +11,18 @@
 |
  */
 
-Route::post('/search/get', 'SearchController@show');
-// Route::get('/search/history/get/{id}', 'SearchController@showHistory');
-Route::get('/search/history/get/{id}', 'SearchController@showHistory2');
-Route::post('/search/history/put', 'SearchController@putHistory');
-Route::post('/bookmark/put', 'SearchController@putFavorite');
-Route::get('/bookmark/get/{id}', 'SearchController@getFavorite');
+Route::post('/user/put', 'userController@put');
+Route::post('/user/get', 'userController@get');
 
-Route::post('/route/walk/get', 'RouteController@show');
-Route::post('/route/bus/get', 'RouteController@showBus');
-Route::post('/route/direction', 'RouteController@direction');
+Route::get('/interest/get/{uid}', 'InterestController@get');
+Route::post('/interest/delete', 'InterestController@delete');
+Route::post('/interest/put', 'InterestController@put');
+
+
+Route::post('/todo/put', 'todo@put');
+Route::post('/todo/check', 'todo@check');
+Route::post('/todo/delete', 'todo@delete');
+Route::get('/todo/get/{uid}', 'todo@get');
+
+Route::get('/bus/1', 'bus@b1');
+Route::get('/bus/2', 'bus@b2');
