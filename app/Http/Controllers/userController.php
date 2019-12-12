@@ -30,4 +30,8 @@ class userController extends Controller
             return 0;
         }
     }
+
+    public function getNickname($id){
+        return DB::table('users')->select("nickname")->where('id', $id)->first()->nickname;
+    }
 }

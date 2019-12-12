@@ -13,6 +13,7 @@
 
 Route::post('/user/put', 'userController@put');
 Route::post('/user/get', 'userController@get');
+Route::get('/user/get/{id}', 'userController@getNickname');
 
 Route::get('/interest/get/{uid}', 'InterestController@get');
 Route::post('/interest/delete', 'InterestController@delete');
